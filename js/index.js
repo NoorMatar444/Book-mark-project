@@ -28,7 +28,7 @@ function displayData() {
                 <tr>
                     <td>${i}</td>
                     <td>${siteLists[i].name}</td>
-                    <td><button onclick="openWebsite(${siteLists[i].url})" class="one rounded-3"><i class="fa-solid fa-eye"></i>Visit</button></td>
+                    <td><button class="one rounded-3"><i class="fa-solid fa-eye"></i><a href="${siteLists[i].url}">Visit</a></button></td>
                     <td><button onclick="deleteItem(${i})" class="two rounded-3"><i class="fa-solid fa-trash"></i>Delete</button></td>
                 </tr>
         `;
@@ -43,13 +43,6 @@ function deleteItem(index) {
   siteLists.splice(index, 1);
   localStorage.setItem("sitesList", JSON.stringify(siteLists));
   displayData();
-}
-function openWebsite(url) {
-  if (url) {
-    window.open(url, "_blank");
-  } else {
-    alert("يرجى إدخال عنوان URL.");
-  }
 }
 function validationName(){
     var regex=/^www.[a-zA-Z][a-zA-Z0-9]{2,19}.com$/;

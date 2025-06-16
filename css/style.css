@@ -3,6 +3,10 @@
     margin: 0;
     padding: 0;
 }
+a{
+    text-decoration: none;
+    color: white;
+}
 body{
     background-color: #F7ECDE;
 }
@@ -80,6 +84,7 @@ ul{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    
 }
 .container .two{
     background-color: red;
